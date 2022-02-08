@@ -9,7 +9,7 @@
 using namespace std;
 
 int isprime(int N, int rank, int size) {
-    int h = N / 2;
+    int h = sqrt(N);
     int k = h / size + 1;
     int upper = (rank + 1) * k + 1;
     int lower = rank * k + 2;
@@ -48,7 +48,8 @@ int main(int argc, char **argv) {
     // cout << "Hello World! I'm rank " << rank << endl;
     // cout << "Total no.of ranks = " << n_ranks << endl;
 
-    int a, i, result = 0;
+    long long int a;
+    int i, result = 0;
 
     if(argc != 3) {
         cout << "Only 2 arguments expected." << endl;
@@ -78,7 +79,9 @@ int main(int argc, char **argv) {
                 i++;
             }
 
-            if (result == 0) {
+            if (a==0) {
+                outfile << "NO" << endl;
+            } else if (result == 0) {
                 outfile << "YES" << endl;
             } else {
                 outfile << "NO" << endl;
