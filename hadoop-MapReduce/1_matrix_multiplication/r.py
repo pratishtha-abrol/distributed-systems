@@ -1,4 +1,3 @@
-from operator import itemgetter
 import sys
 
 curr_key = None
